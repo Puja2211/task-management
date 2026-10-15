@@ -46,11 +46,19 @@ Copy `server/.env.example` to `server/.env` and set your MySQL credentials:
 
 ```env
 PORT=5000
+<<<<<<< HEAD
 CLIENT_ORIGIN=http://localhost:5173
 DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=your_mysql_password
+=======
+CLIENT_ORIGIN=http://localhost:3000
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=
+>>>>>>> master
 DB_NAME=task_manager
 ```
 
@@ -81,7 +89,11 @@ From the project root:
 npm run dev
 ```
 
+<<<<<<< HEAD
 - Frontend: http://localhost:5173
+=======
+- Frontend: http://localhost:3000
+>>>>>>> master
 - Backend health check: http://localhost:5000/api/health
 - API tasks endpoint: http://localhost:5000/api/tasks
 
