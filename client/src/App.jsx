@@ -163,18 +163,6 @@ export default function App() {
           </button>
         </nav>
 
-        <div className="sidebar-bottom">
-          <div className="sidebar-tip">
-            <div className="tip-icon"><Sparkles size={17} /></div>
-            <strong>Small steps add up.</strong>
-            <p>Focus on one task at a time. Progress is progress.</p>
-          </div>
-          <div className="sidebar-profile">
-            <div className="avatar">TM</div>
-            <div className="profile-copy"><strong>My workspace</strong><span>Personal task board</span></div>
-            <CircleHelp size={17} className="profile-help" />
-          </div>
-        </div>
       </aside>
 
       {mobileNav && <button className="mobile-overlay" aria-label="Close navigation" onClick={() => setMobileNav(false)} />}
@@ -230,7 +218,6 @@ export default function App() {
                 <Search size={17} />
                 <input aria-label="Search tasks" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search tasks..." />
                 {search && <button aria-label="Clear search" onClick={() => setSearch("")}><X size={14} /></button>}
-                <kbd>⌘ K</kbd>
               </div>
               <label className="filter-select">
                 <ListFilter size={16} />
@@ -284,10 +271,10 @@ export default function App() {
                 </div>
               )}
             </div>
-            <div className="list-footer"><span><span className="live-dot" /> Your tasks are saved to the database</span><span>{visibleTasks.length} of {counts.all} tasks shown</span></div>
+            <div className="list-footer"><span>{visibleTasks.length} of {counts.all} tasks shown</span></div>
           </section>
 
-          <footer className="page-footer"><span>Made for focused work.</span><span>Taskflow <b>·</b> Stay on track</span></footer>
+          <footer className="page-footer"></footer>
         </div>
       </main>
 

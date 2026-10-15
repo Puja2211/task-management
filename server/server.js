@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const pool = require("./config/db");
+const sequelize = require("./config/db");
 const taskRoutes = require("./routes/taskRoutes");
 
 const app = express();
@@ -15,7 +15,7 @@ app.use(express.json({ limit: "1mb" }));
 
 app.get("/api/health", async (_req, res) => {
   try {
-    await pool.query("SELECT 1");
+    await sequelize.authenticate();
     res.json({ status: "ok", database: "connected" });
   } catch (_error) {
     res.status(503).json({ status: "error", database: "unavailable" });

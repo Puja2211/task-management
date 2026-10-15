@@ -20,7 +20,7 @@ A responsive task-management application built with React, Vite, Node.js, Expres
 - Frontend: React 18, Vite, plain CSS
 - Backend: Node.js, Express
 - Database: MySQL 8+
-- Driver: `mysql2/promise`
+- ORM: Sequelize (using the MySQL dialect and `mysql2`)
 
 ## Requirements
 
